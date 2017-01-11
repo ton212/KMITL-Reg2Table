@@ -1,0 +1,105 @@
+body {
+    font-size: 13px;
+    margin-top: 30px;
+    background: #3BAFDA;
+}
+
+.timetable {
+    font-family: 'THSarabunNew';
+    font-size: 12px;
+}
+
+.timetable td,
+.timetable th {
+    background: #f7fdff;
+    vertical-align: middle !important;
+}
+
+.timetable th {
+    background: #434A54;
+    vertical-align: middle !important;
+}
+
+td.timetable-course {
+    width: 150px;
+    font-size: 13px;
+    vertical-align: middle;
+    background: #0086d5;
+    color: #fff;
+}
+
+th.timetable-day {
+    background: #656D78;
+    color: #fff;
+}
+
+th.timetable-time {
+    width: 150px !important;
+    color: #fff;
+}
+
+.timetable-class_location {
+    font-size: 11px;
+}
+
+.timetable-info {
+    font-family: 'THSarabunNew', sans-serif;
+    font-size: 12px;
+    line-height: 1.95em;
+    margin-bottom: 20px;
+}
+
+.timetable-info strong {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.well {
+    padding: 20px;
+}
+
+.page-header {
+    margin: 0 0 15px 0;
+}
+
+.page-header h3 {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+    margin: 0;
+}
+
+ol {
+    margin: 0;
+    padding-left: 15px;
+}
+
+ol li {
+    margin-bottom: 5px;
+}
+
+.page-header small {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+    /*font-size: 22px;*/
+    color: #aaa;
+}
+
+@media print {
+    body {
+        background: #fff;
+    }
+    
+    .container {
+        width: 100%;
+    }
+    
+    .well {
+        border: 0;
+        padding: 0;
+        margin: 0;
+        background: #fff;
+        box-shadow: none;
+    }
+}
