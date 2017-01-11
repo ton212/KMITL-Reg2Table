@@ -28,9 +28,11 @@
             <div class="inner cover">
                 <h1 class="cover-heading">KMITL Timetable Converter</h1>
                 <p class="lead">โปรแกรมช่วยสร้างตารางเรียนที่ดูง๊ายง่ายกว่าของสำนักทะเบียน</p>
-                <p class="lead">
+                <p class="lead" style="margin-top: 50px;">
                     <a href="{{ route('wizard.step1') }}" class="btn btn-lg btn-default">เริ่มกันเลย... ☺️</a>
                 </p>
+                <p class="lead" style="font-size: 14px;margin-bottom: 10px;">เพื่อความเป็นส่วนตัวของผู้ใช้โปรแกรม ข้อมูลทั้งหมดที่ผ่านโปรแกรมนี้จะ<u>ไม่</u>ถูกบันทึกบนเซิร์ฟเวอร์ของเราและที่ใดๆ</p>
+                <p class="lead" style="font-size: 14px;">โปรแกรมนี้<u>ไม่มี</u>การเชื่อมต่อใดๆ ไปยังระบบของสำนักทะเบียนสจล.</p>
             </div>
 
             <div class="mastfoot">
