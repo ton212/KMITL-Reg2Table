@@ -69,5 +69,11 @@
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="{{ asset('js/ie10-viewport-bug-workaround.js') }}"></script>
+
+<script>
+    @if(Session::has('errorPopup'))
+        alert("{{ session('errorPopup') }}");
+    @endif
+</script>
 </body>
 </html>
