@@ -33,6 +33,11 @@ class WizardController extends Controller
 
         $courses = array_slice($courses, 1);
 
+        if(count($courses) == 0) {
+            return redirect(route('index'))
+                ->with('errorPopup', 'ไม่พบรายวิชาจากข้อมูลดังกล่าว :(');
+        }
+
         session([
             'header' => $header,
             'courses' => $courses
@@ -41,8 +46,12 @@ class WizardController extends Controller
         return redirect(route('wizard.step2'));
     }
 
-    public function stepTwo()
+    public function stepTwo(Request $request)
     {
+        if (!$request->session()->has('courses')) {
+            return redirect(route('index'));
+        }
+
         return view('wizard.step2', [
             'courses' => session('courses')
         ]);
@@ -50,6 +59,10 @@ class WizardController extends Controller
 
     public function processStepTwo(Request $request)
     {
+        if (!$request->session()->has('courses')) {
+            return redirect(route('index'));
+        }
+
         $courses = session('courses');
 
         foreach ($request->acronym as $courseIndex => $value) {
@@ -60,4 +73,5 @@ class WizardController extends Controller
 
         return redirect(route('convert.table'));
     }
+
 }
