@@ -38,7 +38,7 @@
                         @if(array_has($timetable[$date], "{$hour}:00"))
                             <?php $course = $timetable[$date]["{$hour}:00"]; ?>
                             <td class="text-center timetable-course" colspan="{{ ($course[5][1][1] - $course[5][1][0]) * 2 }}">
-                                <strong>{{ "{$course[1]}" }}</strong><br>
+                                <strong>{{ "{$course[1]} {$course[8]}" }}</strong><br>
                                 <span class="timetable-class_location">{{ "{$course[7]} / {$course[6]}" }}</span>
                             </td>
                             <?php $hour += ($course[5][1][1] - $course[5][1][0]) - 1; ?>
@@ -46,7 +46,7 @@
                             <td></td>
                             <?php $course = $timetable[$date]["{$hour}:30"]; ?>
                             <td class="text-center timetable-course" colspan="{{ ($course[5][1][1] - $course[5][1][0]) * 2 }}">
-                                <strong>{{ "{$course[1]}" }}</strong><br>
+                                <strong>{{ "{$course[1]} {$course[8]}" }}</strong><br>
                                 <span class="timetable-class_location">{{ "{$course[7]} / {$course[6]}" }}</span>
                             </td>
                             <?php $hour += $course[5][1][1] - $course[5][1][0]; ?>

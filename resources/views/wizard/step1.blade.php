@@ -16,7 +16,7 @@
                     <li>วางข้อความที่คัดลอกมาในช่องด้านล่าง และคลิกปุ่ม <strong>ถัดไป</strong></li>
                 </ol>
                 <hr>
-                <form action="{{ route('convert.table') }}" method="post">
+                <form action="{{ route('process.step1') }}" method="post">
                     {{ csrf_field() }}
                 	<div class="form-group">
                 		<label>ข้อมูลจากสำนักทะเบียน</label>

@@ -8,25 +8,12 @@ class ConverterController extends Controller
 {
     public function convertToTable(Request $request)
     {
-        $rawData = array_map(function ($course) {
-            return explode("\t\t", $course);
-        }, explode("\n", $request->data));
-
-        $courseStartOffset = 0;
-
-        foreach ($rawData as $index => $data) {
-            if (count($data) == 8 && $courseStartOffset == 0) {
-                $courseStartOffset = $index;
-            }
+        if (!$request->session()->has('courses')) {
+            return redirect(route('index'));
         }
 
-        $header = array_slice(array_slice($rawData, $courseStartOffset - 5), 0, 5);
-
-        $courses = array_filter($rawData, function ($data) {
-            return (count($data) == 8 ? true : false);
-        });
-
-        $courses = array_slice($courses, 1);
+        $courses = session('courses');
+        $header = session('header');
 
         $timetable = [[], [], [], [], [], [], []];
         $timeslot = 0;
