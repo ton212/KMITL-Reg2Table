@@ -19,19 +19,23 @@ class ConverterController extends Controller
         $timeslot = 0;
 
         foreach ($courses as $course) {
-            $timestamp = explode(' ', $course[5]);
-            $time = explode('-', $timestamp[1]);
+            try {
+                $timestamp = explode(' ', $course[5]);
+                $time = explode('-', $timestamp[1]);
 
-            if ($time[1] >= '19:00' or $timeslot == 20) {
-                $timeslot = 20;
-            } else {
-                $timeslot = 16;
+                if ($time[1] >= '19:00' or $timeslot == 20) {
+                    $timeslot = 20;
+                } else {
+                    $timeslot = 16;
+                }
+
+                $timestamp[1] = $time;
+                $course[5] = $timestamp;
+
+                $timetable[$this->thDateToNumeric($timestamp[0])][$time[0]] = $course;
+            } catch (\Exception $e) {
+                continue;
             }
-
-            $timestamp[1] = $time;
-            $course[5] = $timestamp;
-
-            $timetable[$this->thDateToNumeric($timestamp[0])][$time[0]] = $course;
         }
 
         $timetable = array_map(function ($day) {
