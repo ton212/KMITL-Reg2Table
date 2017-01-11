@@ -60,7 +60,7 @@
             @endfor
         </table>
         <div class="text-right timetable-info" style="font-size: 10px;">
-            สร้างจาก KMITL Timetable Converter<br>ที่ https://reg2table.iton.in.th
+            สร้างจาก KMITL Timetable Converter<br>ที่ http://reg2table.iton.in.th
         </div>
     </div>
 @endsection
