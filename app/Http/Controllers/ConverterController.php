@@ -16,7 +16,7 @@ class ConverterController extends Controller
         $header = session('header');
 
         $timetable = [[], [], [], [], [], [], []];
-        $timeslot = 0;
+        $timeslot = 16;
 
         foreach ($courses as $course) {
             try {
