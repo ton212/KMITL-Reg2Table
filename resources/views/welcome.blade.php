@@ -56,10 +56,6 @@
 				<p>@ton212 / sleepCode / @PhompAng / @topggunz / นัตตี้ / XIIKJIIX / foofybuster</p>
                 <p><small>All from Faculty of Information Technology, KMITL</small></p>
 			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
-			</div>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
